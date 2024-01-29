@@ -1,0 +1,10 @@
+.orderdiv {
+    border: 1px solid red;
+    min-height: 300px;
+}
+
+.highlight {
+    background-color: red;
+    color: white;
+}
+

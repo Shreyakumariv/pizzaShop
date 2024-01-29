@@ -1,0 +1,56 @@
+.Header-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Divofshop {
+    gap: 10%;
+    justify-content: center;
+    display: flex;
+}
+
+.TextOfPizzaDashbosrd {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ParagraphofText {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ButtonOfPlaceOrder {
+    width: 141px;
+    height: 41px;
+    border-radius: 10px;
+}
+
+.SelectedType {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.SelectedName {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .Divofshop {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .Divofshop {
+        gap: 3%;
+    }
+}
