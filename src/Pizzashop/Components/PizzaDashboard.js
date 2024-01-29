@@ -133,8 +133,8 @@ const PizzaDashboard = () => {
                       key={order.id}
                       className={`order-item DivOfstage ${shouldHighlight('Order Placed', order.size, timers[order.id + 'Order Placed'])}`}
                     >
-                      <p>
-                        Order ID: {order.id} - Stage: {order.stage} - Remaining Time:{' '}
+                      <p className='OrderStage'>
+                        Order {order.id}  <br /> 
                         {formatTime(timers[order.id + order.stage])}
                       </p>
                       <button className='ButtonOfNext' onClick={() => handleMoveOrder(order.id, 'Order in Making')}>Next</button>
@@ -152,8 +152,8 @@ const PizzaDashboard = () => {
                       key={order.id}
                       className={`order-item DivOfstage ${shouldHighlight('Order in Making', order.size, timers[order.id + 'Order in Making'])}`}
                     >
-                      <p>
-                        Order ID: {order.id} - Stage: {order.stage} - Remaining Time:{' '}
+                      <p className='OrderStage'>
+                        Order {order.id}  <br /> 
                         {formatTime(timers[order.id + order.stage])}
                       </p>
                       <button className='ButtonOfNext' onClick={() => handleMoveOrder(order.id, 'Order Ready')}>Next</button>
@@ -171,8 +171,8 @@ const PizzaDashboard = () => {
                       key={order.id}
                       className={`order-item DivOfstage ${shouldHighlight('Order Ready', order.size, timers[order.id + 'Order Ready'])}`}
                     >
-                      <p>
-                        Order ID: {order.id} - Stage: {order.stage} - Remaining Time:{' '}
+                     <p className='OrderStage'>
+                        Order {order.id}  <br /> 
                         {formatTime(timers[order.id + order.stage])}
                       </p>
                       <button className='ButtonOfNext' onClick={() => handleMoveOrder(order.id, 'Order Picked')}>Next</button>
@@ -187,10 +187,10 @@ const PizzaDashboard = () => {
                   .filter((order) => order.stage === 'Order Picked')
                   .map((order) => (
                     <div className='DivOfstage' key={order.id}>
-                      <p>
-                        Order ID: {order.id} - Stage: {order.stage}   
+                    <p className='OrderStage'>
+                        Order {order.id}  <br /> 
+                        Picked
                       </p>
-                      <p className='Picked'>Picked</p>
                     </div>
                   ))}
               </div>
@@ -211,7 +211,7 @@ const PizzaDashboard = () => {
             <tbody>
               {orderTable.map((order) => (
                 <tr className='OrderTable' key={order.id}>
-                  <td>{order.id}</td>
+                  <td >{order.id}</td>
                   <td>{order.stage}</td>
                   <td>
                     {order.stage === 'Order Picked'

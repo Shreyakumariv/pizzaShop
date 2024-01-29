@@ -26,32 +26,32 @@ const PizzaOrderForm = () => {
       <h2 className='Header-text'>Place Pizza Order</h2>
       <div className='Divofshop'>
 
-      <label className='SelectedType'>
-        Type:
-        <select className='SelectedName' name="type" value={order.type} onChange={handleInputChange}>
-          <option disabled >Select Type</option>
-          <option value="Veg">Veg</option>
-          <option value="Non-Veg">Non-Veg</option>
-        </select>
-      </label>
-      <label className='SelectedType'>
-        Size:
-        <select className='SelectedName' name="size" value={order.size} onChange={handleInputChange}>
-          <option disabled>Select Size</option>
-          <option value="Large">Large</option>
-          <option value="Medium">Medium</option>
-          <option value="Small">Small</option>
-        </select>
-      </label>
-      <label className='SelectedType'>
-        Base:
-        <select className='SelectedName' name="base" value={order.base} onChange={handleInputChange}>
-          <option disabled>Select Base</option>
-          <option value="Thin">Thin</option>
-          <option value="Thick">Thick</option>
-        </select>
-      </label>
-      <button className='ButtonOfPlaceOrder' onClick={handlePlaceOrder}>Place Order</button>
+        <label className='SelectedType'>
+          Type:
+          <select className='SelectedName' name="type" value={order.type} onChange={handleInputChange}>
+            <option disabled >Select Type</option>
+            <option value="Veg">Veg</option>
+            <option value="Non-Veg">Non-Veg</option>
+          </select>
+        </label>
+        <label className='SelectedType'>
+          Size:
+          <select className='SelectedName' name="size" value={order.size} onChange={handleInputChange}>
+            <option disabled>Select Size</option>
+            <option value="Large">Large</option>
+            <option value="Medium">Medium</option>
+            <option value="Small">Small</option>
+          </select>
+        </label>
+        <label className='SelectedType'>
+          Base:
+          <select className='SelectedName' name="base" value={order.base} onChange={handleInputChange}>
+            <option disabled>Select Base</option>
+            <option value="Thin">Thin</option>
+            <option value="Thick">Thick</option>
+          </select>
+        </label>
+        <button className='ButtonOfPlaceOrder' onClick={handlePlaceOrder}>Place Order</button>
       </div>
     </div>
   );
